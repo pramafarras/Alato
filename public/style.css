@@ -1,0 +1,94 @@
+@media (max-width: 992px) {
+    .profile-icon {
+      display: none;
+    }
+
+  }
+
+.bg-home {
+    background-image: url('imageallpage.jpg');
+    /* background-image: url('home_wallpaper.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-workout {
+    background-image: url('home_wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+.bg-landingpage {
+    background-image: url('landingpage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.text-color{
+    color: white;
+}
+
+.fulltext-margin {
+    margin-left: 300px;
+    margin-right: 300px;
+
+    @media (max-width: 992px){
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.halftext-margin {
+    /* margin-left: 300px; */
+    margin-right: 300px;
+
+    @media (max-width: 992px){
+        /* margin-left: 10%; */
+        margin-right: 10%;
+    }
+}
+
+.bg-theme {
+    background-color: #37b937;
+}
+
+.bg-theme2 {
+    background-color: #000000;
+}
+
+.full-height {
+    height: 100vh;
+
+}
+
+.full-height .img-fluid {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.footer-container{
+    background-color: #37b937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-h1 {
+    color: white;
+    font-size: 20px;
+}
+
+.label-li:hover{
+    cursor: pointer;
+    box-shadow: #000000;
+}
+
+
+
+
