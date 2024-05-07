@@ -15,21 +15,21 @@
               <div class="d-flex align-items-center d-flex justify-content-center">
                 <ul class="form-check container-fluid list-group list-group-flush ">
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Chest
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Abdomen
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Obliques
                       </label>
@@ -48,21 +48,21 @@
               <div class="d-flex align-items-center d-flex justify-content-center">
                 <ul class="form-check container-fluid list-group list-group-flush ">
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Lower Back
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Traps
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Lats
                       </label>
@@ -81,28 +81,28 @@
               <div class="d-flex align-items-center d-flex justify-content-center">
                 <ul class="form-check container-fluid list-group list-group-flush ">
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Shoulders
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Biceps
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Triceps
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Forearms
                       </label>
@@ -121,42 +121,42 @@
               <div class="d-flex align-items-center d-flex justify-content-center">
                 <ul class="form-check container-fluid list-group list-group-flush ">
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Quads
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Hamstrings
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Glutes
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Abductors
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Adductors
                       </label>
                     </div>
                   </li>
                   <li class="text-bg-dark d-flex flex-col-reverse container-fluid mb-2 list-group-item w-100">
-                    <div class="btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
+                    <div class="li-hover py-1 btn-group-vertical container-fluid" data-toggle="buttons" role="group" aria-label="Basic radio toggle button group">
                       <label class="label-li w-100 d-flex justify-content-between align-items-center flex-row-reverse">
                         <input type="checkbox" autocomplete="off">Calves
                       </label>

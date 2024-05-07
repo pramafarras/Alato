@@ -3,6 +3,7 @@
 use App\Http\Controllers\BodypartsController;
 use App\Http\Controllers\MyPlaylistController;
 use App\Http\Controllers\RatedlistController;
+use App\Http\Controllers\StoreImage;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -15,7 +16,7 @@ use App\Http\Controllers\WorkoutController;
 // });
 
 Route::get('/home', [HomeController::class, 'index']);
-Route::get('/equipments', [EquipmentsController::class, 'index'])->middleware('auth');
+Route::get('/equipments', [EquipmentsController::class, 'index']);
 Route::get('/equipments/{equipment}', [EquipmentsController::class, 'show']);
 
 Route::get('/bodyparts', [BodypartsController::class,'index']);
@@ -33,3 +34,4 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/ratedlist', [RatedlistController::class,'index']);
 
 Route::get('/myplaylist', [MyPlaylistController::class,'index']);
+

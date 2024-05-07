@@ -42,7 +42,6 @@
         @auth
 
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{-- <img src="profile png.png" alt="Profile Icon" width="32" height="32"> --}}
               {{ auth()->user()->username }}
               <!-- PROFILE -->
             </a>
@@ -79,15 +78,17 @@
     @yield('content')
 </div>
 
-<div class="container-fluid bg-theme2 text-center d-flex justify-content-center align-items-center m-0 text-color" id="contact">
-    <div class="col-lg-3 p-5 p-lg-4 fulltext-margin">
+<footer class="bg-theme2 text-center d-flex justify-content-center align-items-center m-0 mt-auto text-color" id="contact">
+
+    <div class="p-5 p-lg-4">
       <h1 class="display-5 fw-bold mb-5">GET IN TOUCH</h1>
       <h3>CONTACT US</h3>
       <p>Have a question? Want to learn more about our programs? Fill out the contact form and we'll get back to you as soon as possible.
           Tel: 123-456-7890
           Email: alato@gmail.com</p>
         </div>
-  </div>
+
+  </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

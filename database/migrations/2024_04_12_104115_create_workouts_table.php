@@ -13,7 +13,16 @@ return new class extends Migration
     {
         Schema::create('workouts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('equipment_id');
+            $table->string('title');
+            $table->text('execution');
+            $table->text('tips');
+            $table->string('bodypart');
+            $table->longBlob('video')->nullable();
+            $table->decimal('rate')->nullable();
             $table->timestamps();
+
+            $table->foreign('equipment_id')->references('id')->on('equipments')->onDelete('cascade');
         });
     }
 
