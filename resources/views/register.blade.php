@@ -11,7 +11,7 @@
 
     <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 col-xl-5 bg-theme2 full-height">
+          <div class="col-md-12 col-xl-5 bg-thememain full-height">
             <div class="text-color p-5 m-5 d-flex flex-column align-items-start">
               <h1 class="display-1 fw-bold mb-5">SIGN UP</h1>
               <form action="/register" method="post" class="container">

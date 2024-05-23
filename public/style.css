@@ -1,17 +1,23 @@
-@media (max-width: 992px) {
-    .profile-icon {
-      display: none;
-    }
 
-  }
 
-.bg-home {
-    background-image: url('imageallpage.jpg');
-    /* background-image: url('home_wallpaper.jpg'); */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* color palette website */
+.bg-thememain{
+    background-color: #191A19;
 }
+
+.bg-theme {
+    background-color: #37b937;
+}
+
+.bg-theme2 {
+    background-color: #1E5128;
+}
+.bg-theme3 {
+    background-color: #D8E9A8;
+}
+/* color palette website */
+
+
 
 .bg-workout {
     background-image: url('home_wallpaper.jpg');
@@ -26,6 +32,35 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.bg-home {
+    background-image: url('fitness_home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+    z-index: -1;
+
+}
+
+.bg-programs {
+    background-image: url('gambar4.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+    z-index: -1;
+    -webkit-filter: brightness(0.5);
 }
 
 
@@ -53,13 +88,15 @@
     }
 }
 
-.bg-theme {
-    background-color: #37b937;
+
+pre.wrap-text {
+    white-space: pre-line;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5;
 }
 
-.bg-theme2 {
-    background-color: #000000;
-}
+
 
 .full-height {
     height: 100vh;
@@ -76,22 +113,69 @@
     object-fit: cover;
 }
 
-
-
-.label-li:hover{
-    cursor: pointer;
-    box-shadow: #000000;
+/* .hoverrated{
+    overflow: hidden;
+    transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -webkit-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -moz-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -ms-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -o-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: #a7d625;
 }
 
-
-  /* .hover:hover .card-img-overlay {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    transition: box-shadow 0.3s ease;
-    -webkit-transition: box-shadow 0.3s ease;
-    -moz-transition: box-shadow 0.3s ease;
-    -ms-transition: box-shadow 0.3s ease;
-    -o-transition: box-shadow 0.3s ease;
+.hoverrated:hover{
+    background-color: #D8E9A8;
 } */
+
+.hoverrated:hover {
+    color: #ff6347; /* Tomato color */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.checkedhover {
+    overflow: hidden;
+  }
+
+  .checkedhover{
+    overflow: hidden;
+    transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out;
+    -webkit-transition: transform 0.5 ease-in-out, ;
+    -moz-transition: transform 0.5 ease-in-out, ;
+    -ms-transition: transform 0.5 ease-in-out, ;
+    -o-transition: transform 0.5 ease-in-out, ;
+}
+
+  .checkedhover:hover{
+    transform: scale(1.02);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.973);
+    color: #ffe400;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+.card-container {
+    overflow: hidden;
+  }
+
+  .card-container{
+    overflow: hidden;
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.973);
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    -moz-transition: box-shadow 0.2s ease-in-out;
+    -ms-transition: box-shadow 0.2s ease-in-out;
+    -o-transition: box-shadow 0.2s ease-in-out;
+}
+
+  .card-container:hover{
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.973);
+
+}
+
 
 .image-container {
     overflow: hidden;
@@ -113,6 +197,11 @@
     -o-transform: scale(1.1);
 }
 
+.label-li:hover{
+    cursor: pointer;
+    box-shadow: #000000;
+}
+
 .li-hover {
     overflow: hidden;
     transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
@@ -132,7 +221,56 @@
     /*Changethistothedesiredhovercolor*/
 }
 
+.btn-hover:hover{
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
 
+.btn-link:hover .bi-trash3-fill  {
+    color: rgb(243, 50, 50);
+    transform: scale(1.03);
+}
+
+.btn-link:hover .bi-x-lg {
+    color: rgb(243, 50, 50);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.checked {
+    color: #ffe400;
+}
+
+.rating-css div {
+    color: #ffe400;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+  }
+  .rating-css input {
+    display: none;
+  }
+  .rating-css input + label {
+    font-size: 50px;
+    text-shadow: 2px 2px 0 #2b2b2b;
+    cursor: pointer;
+  }
+  .rating-css input:checked + label ~ label {
+    color: #7a7a7a;
+  }
+  .rating-css label:active {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+  }
 
 
 

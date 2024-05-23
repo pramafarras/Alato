@@ -11,6 +11,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
@@ -44,4 +45,29 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    public function ratings(){
+        return $this->belongsToMany(Rating::class, 'user_rate', 'user_id', 'id');
+    }
+
+    public function playlists(){
+        return $this->hasMany(Playlist::class);
+    }
+
+    public function workouts()
+    {
+        return $this->belongsToMany(Workout::class, 'user_workout', 'user_id', 'workout_id')
+            ->withPivot('is_rated', 'is_playlist')
+            ->withTimestamps();
+    }
+
+    public function ratedWorkouts()
+    {
+        return $this->belongsToMany(Workout::class, 'user_rate')
+            ->withPivot('rating')
+            ->withTimestamps();
+    }
+
+
 }

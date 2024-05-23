@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('equipments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->mediumText('image')->charset('binary');
-            $table->timestamp('published_at')->nullable();
+            $table->longText('image')->charset('binary');
             $table->timestamps();
         });
+
     }
 
     /**

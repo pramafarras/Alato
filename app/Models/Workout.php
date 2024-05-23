@@ -9,14 +9,32 @@ class Workout extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $table = 'workouts';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
-        'rate',
-    ];
+        'title',
+        'execution',
+        'tips',
+        'video',
+      ];
+
+    public function equipments()
+    {
+        return $this->belongsTo(Equipments::class, 'equipment_id');
+    }
+
+    public function ratings(){
+        return $this->hasMany(Rating::class, 'workout_id', 'id');
+    }
+
+
+    public function bodyparts(){
+        return $this->belongsToMany(Bodyparts::class, 'bodypart_workout', 'workout_id', 'bodypart_id');
+    }
+
+
+    public function playlists(){
+        return $this->belongsToMany(Playlist::class, 'playlist_workout', 'workout_id','playlist_id');
+    }
+
 }

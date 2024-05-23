@@ -20,16 +20,16 @@
     @if ($equipments->count())
 
     <div class="container-fluid text-color ">
-        <div class="container  d-flex justify-content-center align-items-center flex-column my-2">
+        <div class="container d-flex justify-content-center align-items-center flex-column my-2" style="min-height: 85vh;">
         <h1 class="fw-bold display-3">EQUIPMENTS LIST</h1>
 
 
-            <div class="row container my-2 py-2 ">
+            <div class="row container my-2 py-2">
     @foreach ($equipments as $eq)
 
-              <div class="col-sm-12 col-md-4 mb-3 image-container">
-                <a href="/bodyparts" class="card text-bg-dark h-100 hover">
-                    <img src="data:image/png;base64,{{ base64_encode($eq->image) }}" class="img-fluid rounded-start p-3" >
+              <div class="col-sm-12 col-md-4 mb-3 image-container ">
+                <a href="{{ route('bodyparts', ['equipment' => $eq->id]) }}" class="card text-bg-dark h-100 hover ">
+                    <img src="data:image/png;base64,{{ base64_encode($eq->image) }}" class="img-fluid rounded-start p-3">
 
                     <div class="card-img-overlay d-flex  justify-content-center align-items-end">
                       <h5 class="card-title text-light w-100 py-2 text-center bg-black bg-opacity-50 position-relative">{{ $eq["name"] }}</h5>
@@ -43,7 +43,7 @@
     </div>
     </div>
     @else
-        <h1 class="display-3 text-light text-center mb-3">No Equipment Found</h1>
+        <h1 class="display-3 text-light text-center mb-3 container-fluid d-flex align-items-center justify-content-center flex-column h-100" style="min-height: 85vh;">No Equipment Found</h1>
     @endif
 
 @endsection

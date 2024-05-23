@@ -2,69 +2,58 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BodypartsRequest;
 use App\Models\Bodyparts;
 use App\Http\Requests\StoreBodypartsRequest;
 use App\Http\Requests\UpdateBodypartsRequest;
+use App\Models\BodypartCategory;
+use App\Models\Equipments;
+use App\Models\Workout;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request as FacadesRequest;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 
 class BodypartsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id, Request $request)
     {
+        $equipment = Equipments::with('bodyparts.category')->findOrFail($id);
+        $filteredBodyparts = $equipment->bodyparts->load('category');
+        $categories = $filteredBodyparts->pluck('category')->unique();
+
+
         return view('bodyparts', [
             'title' => 'Bodyparts',
-            'active'=> 'bodyparts',
-            // 'bodyparts' => Bodyparts::all(),
+            'categories' => $categories,
+            'equipment' => $equipment,
+            'filteredBodyparts' => $filteredBodyparts,
+            'selectedBodypartIds' => [],
+
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+    public function validate($id, Request $request)
+{
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreBodypartsRequest $request)
-    {
-        //
-    }
+    $validatedData = $request->validate([
+        'filterworkout' => 'required|array|min:1',
+    ], [
+        'filterworkout.required' => 'Please select at least one bodypart.',
+        'filterworkout.min' => 'Please select at least one bodypart.',
+    ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Bodyparts $bodyparts)
-    {
-        //
-    }
+    $selectedBodypartIds = $request->input('filterworkout', []);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Bodyparts $bodyparts)
-    {
-        //
-    }
+    return redirect()->route('workout', [
+        'filterworkout' => $selectedBodypartIds,
+        'equipment' => $id,
+    ]);
+}
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateBodypartsRequest $request, Bodyparts $bodyparts)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Bodyparts $bodyparts)
-    {
-        //
-    }
 }

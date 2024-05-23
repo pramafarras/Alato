@@ -1,22 +1,22 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container-fluid p-5" id="home">
+    <section class="container-fluid p-5 my-5" id="home">
+        <div class="bg-home "></div>
       <div class="row align-items-center my-lg-5">
-        <div class="col-12">
+        <div class="col-12 my-5">
           <div class="text-start fulltext-margin text-color">
-            <h1 class="display-1 fw-bold">WELCOME</h1>
-            <h1 class="display-1 fw-bold">TO ALATO</h1>
-            <h2 class="lead display-5 my-2">AN ONLINE WORKOUT PROGRAM THAT SHOWS YOU THE BEST FITNESS EQUIPMENTS</h2>
-            <a href="/equipments" class="btn btn-success mt-lg-1">GET STARTED NOW</a>
+            <h1 class="display-1 fw-bold w-100 d-flex flex-wrap" >WELCOME TO ALATO</h1>
+            <h2 class="lead display-6 my-2 w-75">AN ONLINE WORKOUT PROGRAM THAT SHOWS YOU THE BEST FITNESS EQUIPMENTS</h2>
+            <a href="/equipments" class="btn btn-success text-black mt-lg-2 px-3 btn-hover" style="background-color: #37b937;">GET STARTED NOW</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- SECTION 1 END -->
 
     <!-- CONTENT 1 -->
-    <div class="bg-theme text-center justify-content-center align-items-center d-flex mt-lg-3">
+    <div class="bg-theme text-light text-center justify-content-center align-items-center d-flex">
         <h2 class="display-4 px-lg-5 fulltext-margin py-3">"IF YOU WANT TO BE STRONG, YOU MUST FIRST WILLING TO BE WEAK"</h2>
     </div>
     <!-- CONTENT 1 END -->
@@ -32,7 +32,7 @@
         <div class="col-6 d-flex align-items-center justify-content-center p-0">
           <img src="gambar2.jpg" alt="Image 2" class="img-fluid">
         </div>
-        <div class="col-6 d-flex align-items-center flex-column text-color p-5 bg-theme2 justify-content-center">
+        <div class="col-6 d-flex align-items-center flex-column text-color p-5 bg-thememain justify-content-center">
           <div class="halftext-margin">
             <h3 class="display-6 fw-bold">ABOUT ALATO</h3>
             <h1 class="display-2 fw-bold mb-5">OUR STORY</h1>
@@ -47,7 +47,8 @@
     <!-- SECTION 2 END -->
 
     <!-- SECTION 3 -->
-    <section class="container-fluid full-height text-color text-center position-relative p-5 d-flex align-items-center" style="background-image: url(gambar4.jpg); background-size: cover;" id="programs">
+    <section class="container-fluid full-height text-color text-center position-relative p-5 d-flex align-items-center "  id="programs">
+        <div class="bg-programs"></div>
       <div class="container">
         <div>
           <h1 class="display-2 fw-bold mb-5 px-5 my-5 ">OUR WORKOUT PROGRAMS</h1>
@@ -70,7 +71,7 @@
               <li class="position-relative ">
                 <h1 class="position-absolute m-0 top-0 start-0 w-100 h-100 fw-bold display-1 d-flex align-items-center justify-content-center" style="color: #37b937; line-height: 1;">3</h1>
                 <span class="position-relative" style="font-size: x-large;">
-                  WEIGHT LOSS
+                  KNOWLEDGE
                 </span>
               </li>
           </ul>
@@ -82,32 +83,40 @@
     <!-- SECTION 4 -->
     <section class="row full-height m-0 " id="faq">
       <div class="col-6 d-flex align-items-center justify-content-center p-0">
-        <img src="gambar1.jpg" alt="Image 2" class="img-fluid">
+        <img src="home_wallpaper.jpg" alt="Image 2" class="img-fluid">
       </div>
-      <div class="col-6 d-flex align-items-center flex-column text-color p-5 bg-theme justify-content-center text-start">
-        <div class="halftext-margin">
-          <h1 class="text-center display-2 fw-bold mb-4">FAQ</h1>
-          <ul class="">
-            <li class="mb-5">
-                <h2>What is Alato?</h2>
-                <p>Alato is a fitness website which will help those of you who are confused and don't know what kind of equipment to use or don't know what kind of equipment can be used in exercising​</p>
+      <div class="col-6 d-flex align-items-center flex-column text-light p-5 bg-thememain justify-content-center text-center">
+        <div class="container px-5">
+          <h1 class="text-center display-2 fw-bold mb-5">FAQ</h1>
+          <ul class="list-unstyled px-5">
+            <li class="mb-5 ">
+                <h2><i>What is Alato?</i></h2>
+                <p><i>Alato is a fitness website which will help those of you who are confused and don't know what kind of equipment to use or don't know what kind of equipment can be used in exercising</i>​</p>
             </li>
             <li class="mb-5">
-                <h2>How do I choose equipment and get the right workout?</h2>
-                <p>​Click "Get Started Now", select the equipments you have, then select the part of your body that you want to train. Then a list of appropriate workouts will appear​</p>
+                <h2><i>How do I choose equipment and get the right workout?</i></h2>
+                <p><i>​Click "Get Started Now" in this page, then select the equipments you have, after that select the part of your body that you want to train. and Then a list of appropriate workouts will appear</i>​</p>
             </li>
             <li class="mb-5">
-                <h2>How to create workout playlist?</h2>
-                <p>Click workout playlist and then click the button "create playlist" then add the workout​</p>
+                <h2><i>How to rate workout?</i></h2>
+                <p><i>Choose the workout you want to rate then click "Rate This Workout" Button</i>​</p>
             </li>
             <li class="mb-5">
-                <h2>If i have more question, how can i call?</h2>
-                <p>​Send an email to alato@gmail.com we will be ready to heal all your doubts​</p>
+                <h2><i>How to create workout playlist?</i></h2>
+                <p><i>Click workout playlist and then click the button "create playlist" then add the workout</i>​</p>
+            </li>
+            <li class="mb-5">
+                <h2><i>If i have more question, how can i call?</i></h2>
+                <p><i>​Send an email to alato@gmail.com we will be ready to answer all your doubts</i>​</p>
             </li>
         </ul>
         </div>
       </div>
     </section>
+
+    <div class="bg-theme text-center text-light d-flex justify-content-center align-items-center ">
+        <h2 class="display-4 px-lg-5 fulltext-margin py-3">"WITH THE RIGHT KNOWLEDGE WE BECOME THE BEST WE CAN BE"</h2>
+    </div>
 
     <!-- SECTION 4 END -->
 
