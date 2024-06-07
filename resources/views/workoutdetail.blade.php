@@ -65,7 +65,7 @@
                         <h5 class="modal-title" id="removeRatedModalLabel">Delete <i>{{ $workouts->title }}</i></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body text-start">
                         Are you sure you want to delete your rate for this workout?
                     </div>
                     <div class="modal-footer">
@@ -81,18 +81,18 @@
 
 <div class="container-fluid">
 <div class="row">
-    <div class="col-md-6 d-flex align-items-center justify-content-center p-0 border-end">
+    <div class="col-xl-6 d-flex align-items-center justify-content-center p-0 border-end border-end-lg">
         <div class="ratio ratio-16x9 w-100">
 
                         <iframe src="{{ $workouts->video }}" allowfullscreen></iframe>
 
         </div>
     </div>
-    <div class="col-md-6 d-flex align-items-start flex-column text-light py-5 ps-5 justify-content-center ">
+    <div class="col-xl-6 d-flex align-items-start flex-column text-light py-5 py-5 justify-content-center">
         <div class="container w-100">
         <h1 class="display-6 fw-bold">{{ $workouts->title }}</h1>
-            <div class="row w-50 d-flex align-content-center align-items-center justify-content-start">
-            <div class="col-auto">
+            <div class="row w-50 d-flex align-content-center align-items-center justify-content-start mb-2 w-100">
+            <div class="col-auto ">
             <h5 class="text-center display-1 fw-bold">{{ number_format($averageRating, 1) }}</h5>
             </div>
             <div class="col-auto d-flex flex-column align-items-start justify-content-center ">
@@ -124,7 +124,7 @@
                 Edit My Rate
             </button>
                 <button class="btn btn-link p-0 me-2" style="color: rgb(153, 33, 33)" type="submit" data-bs-toggle="modal" data-bs-target="#removeRatedModal"><i class="bi bi-trash3-fill" style="font-size: 1em;" ></i></button>
-            <i>You Already Rated This Workout</i>
+            <i><small style="font-size: 14px;">You Already Rated</small></i>
             @else
             <button type="button" class="btn btn-warning btn-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Rate This Workout
@@ -155,9 +155,9 @@
 
             <div class="w-75">
                 <h2 class="mt-2">Execution</h2>
-                <pre class="wrap-text" style="font-size: 18px">{{ $workouts->execution }}</pre>
+                <pre class="wrap-text fs-6 fs-lg-4">{{ $workouts->execution }}</pre>
                 <h2>Tips</h2>
-                <pre class="wrap-text" style="font-size: 18px">{{ $workouts->tips }}</pre>
+                <pre class="wrap-text fs-6 fs-lg-4">{{ $workouts->tips }}</pre>
             </div>
         </div>
         </div>

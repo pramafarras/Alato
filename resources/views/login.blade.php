@@ -11,8 +11,8 @@
 
     <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 col-xl-5 bg-thememain full-height">
-            <div class="text-color p-5 m-5 d-flex flex-column align-items-start">
+          <div class="col-md-12 col-lg-6 col-xl-4 bg-thememain full-height">
+            <div class="text-color px-5 px-lg-5 px-sm-5 d-flex flex-column align-items-center justify-content-center align-content-center h-100 mx-0">
 
                 @if (session()->has('success'))
                 <div class="container alert alert-success alert-dismissible fade show d-flex justify-content-between" role="alert">
@@ -32,12 +32,13 @@
                   </div>
                 @endif
 
-              <h1 class="display-1 fw-bold mb-4">SIGN IN YOUR ACCOUNT</h1>
-              <form class="container" action="/login" method="post" >
+              <h2 class="display-1 fw-bold mb-4">SIGN IN YOUR ACCOUNT</h2>
+              <div class="d-flex flex-column justify-content-center align-content-center align-items-center w-100">
+              <form action="/login" method="post" class="w-100">
                 @csrf
-                <div class="mt-2">
+                <div class="mb-2">
                     <label for="email" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control  @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
+                    <input type="email" name="email" class="form-control  @error('email') is-invalid @enderror" id="email" placeholder="example@gmail.com" autofocus required value="{{ old('email') }}">
 
 
                     @error('email')
@@ -47,7 +48,7 @@
                     @enderror
                   </div>
 
-                  <div class="mt-2">
+                  <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
 
@@ -58,21 +59,22 @@
                     @enderror
                   </div>
 
-                <div class="mt-2 form-check">
+                {{-- <div class="mt-2 form-check">
                   <input type="checkbox" class="form-check-input" id="rememberMe">
                   <label class="form-check-label" for="rememberMe">Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-success mt-2 container">Log In</button>
+                </div> --}}
+                <button type="submit" class="btn btn-success my-2 w-100 btn-hover">Log In</button>
                 </form>
-            <div class="d-block text-center mt-2 text-light container">
-                    Not Registered?
-                    <a href="/register" class="container">Register</a>
-            </div>
 
+            <div class="d-block text-center text-light w-100">
+                    Not Registered?
+                    <a href="/register">Register</a>
+            </div>
+            </div>
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

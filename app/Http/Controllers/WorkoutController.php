@@ -41,9 +41,10 @@ class WorkoutController extends Controller
         });
 
     // Apply the search filter after applying other filters
-    if ($request->filled('search')) {
-        $workoutsQuery->where('title', 'like', '%' . $request->input('search') . '%');
-    }
+    $searchTerm = $request->input('search');
+        if ($searchTerm) {
+            $workoutsQuery->where('title', 'like', '%' . $searchTerm . '%');
+        }
 
     $workouts = $workoutsQuery->get()
     ->map(function ($workout) {
@@ -69,6 +70,15 @@ class WorkoutController extends Controller
         ]);
     }
 
+    $userId = Auth::id(); // Load all workouts
+    $userHasRatedWorkouts = Rating::where('user_id', $userId)->exists();
+
+    $recommendedWorkouts = null;
+        if ($userHasRatedWorkouts) {
+            $recommendedWorkouts = app('App\Http\Controllers\RecommendationController')->getRecommendations($request->merge(['user_id' => $userId, 'workouts' => $workouts]));
+        }
+
+    // dd($recommendedWorkouts);
     $workout = Workout::first();
     $ratings = Rating::where('workout_id', $workout->id)->get();
 
@@ -80,6 +90,8 @@ class WorkoutController extends Controller
         'ratings' => $ratings,
         'workout' => $workouts->first(),
         'user' => $user,
+        'recommendedWorkouts' => $recommendedWorkouts ?? collect(),
+        'userHasRatedWorkouts' => $userHasRatedWorkouts,
     ]);
 }
 

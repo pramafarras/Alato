@@ -16,7 +16,7 @@ use App\Http\Controllers\WorkoutController;
 //     return redirect()->route('home');
 // });
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/equipments', [EquipmentsController::class, 'index'])->middleware('auth');
 Route::get('/equipments/{equipment}', [EquipmentsController::class, 'show']);
 

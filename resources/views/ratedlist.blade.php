@@ -4,13 +4,14 @@
 
 @section('content')
 
+<div class="container-fluid text-color">
 @if ($workouts->count())
-    <div class="container-fluid text-color">
-        <div class="d-flex justify-content-center align-items-center flex-column my-3 text-center mx-5 px-3">
+
+        <div class="d-flex justify-content-center align-items-center flex-column my-3 text-center mx-2 mx-lg-5 px-2 px-lg-3">
         <h1 class="fw-bold pt-3 display-3 mb-5">RATED LIST</h1>
 
         @foreach ($workouts as $data)
-    <div class="mb-3 container border-bottom hoverrated pt-3 rounded-top position-relative w-50" style="max-height: 300px;">
+    <div class="mb-3 container border-bottom hoverrated pt-3 rounded-top position-relative w-100 w-lg-50" style="max-height: 300px;">
         <a href="/workout/{{ $data->id }}" class="text-decoration-none" style="color: white;">
             <div class="col-md-3 w-100">
                 <h1 class="text-start">{{ $data->title }}</h1>
@@ -62,7 +63,7 @@
                             <h5 class="modal-title" id="removeRatedModalLabel">Delete <i>{{ $data->title }}</i></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body text-start">
                             Are you sure you want to delete your rate for this workout?
                         </div>
                         <div class="modal-footer">

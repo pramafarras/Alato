@@ -3,7 +3,8 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container-fluid text-center d-flex justify-content-center align-items-center align-content-center py-3">
+<div class="container-fluid">
+    <div class="w-100 text-center d-flex justify-content-center align-items-center align-content-center py-3">
     <div class="col-md-4">
             <i class="display-6 text-color shadow">Find Your Equipments</i>
             <form action="/equipments">
@@ -19,20 +20,20 @@
 
     @if ($equipments->count())
 
-    <div class="container-fluid text-color ">
-        <div class="container d-flex justify-content-center align-items-center flex-column my-2" style="min-height: 85vh;">
-        <h1 class="fw-bold display-3">EQUIPMENTS LIST</h1>
+    <div class="container-fluid text-color">
+        <div class="container-lg d-flex justify-content-center align-items-center flex-column my-2">
+        <h1 class="fw-bold display-3 text-center">EQUIPMENTS LIST</h1>
 
 
-            <div class="row container my-2 py-2">
+            <div class="row">
     @foreach ($equipments as $eq)
 
-              <div class="col-sm-12 col-md-4 mb-3 image-container ">
+              <div class="col-6 col-md-4 mb-3 image-container ">
                 <a href="{{ route('bodyparts', ['equipment' => $eq->id]) }}" class="card text-bg-dark h-100 hover ">
-                    <img src="data:image/png;base64,{{ base64_encode($eq->image) }}" class="img-fluid rounded-start p-3">
+                    <img src="data:image/png;base64,{{ base64_encode($eq->image) }}" class="img-fluid rounded-start">
 
-                    <div class="card-img-overlay d-flex  justify-content-center align-items-end">
-                      <h5 class="card-title text-light w-100 py-2 text-center bg-black bg-opacity-50 position-relative">{{ $eq["name"] }}</h5>
+                    <div class="card-img-overlay d-flex  justify-content-center align-items-end" style="padding: 0.5rem">
+                      <h5 class="text-light w-100 py-2 text-center bg-black bg-opacity-50 position-relative w-lg-auto fs-6 fs-lg-2">{{ $eq["name"] }}</h5>
                     </div>
                 </a>
               </div>
@@ -43,7 +44,9 @@
     </div>
     </div>
     @else
-        <h1 class="display-3 text-light text-center mb-3 container-fluid d-flex align-items-center justify-content-center flex-column h-100" style="min-height: 85vh;">No Equipment Found</h1>
+    <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+        <h1 class="display-5 text-light text-center">No Equipment Found</h1>
+    </div>
     @endif
-
+</div>
 @endsection

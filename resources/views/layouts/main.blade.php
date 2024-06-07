@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alato | {{ $title }}</title>
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
 </head>
-<body class="bg-thememain">
+<body class="bg-thememain min-vh-100">
 
 <!-- NAVIGATION BAR -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark text-light">
@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link {{($title === "Home") ? 'active' : ''}}"  aria-current="page" href="/home">HOME</a>
+            <a class="nav-link {{($title === "Home") ? 'active' : ''}}"  aria-current="page" href="/">HOME</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">ABOUT</a>
@@ -56,7 +56,7 @@
                   <form action="/logout" method="post">
                     @csrf
                       <button type="submit" class="dropdown-item">
-                            Logout <i class="bi bi-box-arrow-right"></i>
+                            LOGOUT <i class="bi bi-box-arrow-right"></i>
                       </button>
                   </form>
                 </li>
@@ -65,7 +65,7 @@
         @else
         <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a href="/login" class="nav-link">Login</a>
+                <a href="/login" class="nav-link">LOGIN</a>
               </li>
         </ul>
         @endauth
@@ -77,18 +77,18 @@
   </nav>
   <!-- NAVIGATION BAR SELESAI -->
 
-<div>
+<div class="flex-grow-1">
     @yield('content')
 </div>
 
-<footer class="bg-dark text-center d-flex justify-content-center align-items-center m-0 mt-auto text-color" id="contact">
+<footer class="container-fluid bg-dark text-center d-flex justify-content-center align-items-center m-0 mt-auto text-color" id="contact">
 
-    <div class="p-5 p-lg-4 ">
-      <h1 class="display-5 fw-bold mb-5">GET IN TOUCH</h1>
+    <div class="container px-5 py-3 px-lg-3">
+      <h1 class="display-5 fw-bold mb-3">GET IN TOUCH</h1>
       <h3>CONTACT US</h3>
-      <p class="container w-50">Have a question? Want to learn more about our programs? Fill out the contact form and we'll get back to you as soon as possible.
-          Tel: 123-456-7890
-          Email: alato@gmail.com</p>
+      <p class="fs-7 mb-0">Have a question? Contact us</p>
+          <p class="fs-7 mb-0">Tel: 123-456-7890</p>
+          <p class="fs-7 mb-0">Email: alato@gmail.com</p>
         </div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

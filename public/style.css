@@ -1,8 +1,30 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('/fonts/DMSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+div, section {
+    font-family: 'DM Sans', sans-serif;
+}
+
 
 
 /* color palette website */
 .bg-thememain{
     background-color: #191A19;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .bg-theme {
@@ -17,18 +39,30 @@
 }
 /* color palette website */
 
+.h-section{
+    min-height: 50vh;
+    /* min-width: 50vh; */
+}
 
 
 .bg-workout {
     background-image: url('home_wallpaper.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     object-fit: cover;
 }
 
+.bg-story {
+    background-image: url('gambar2.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+
 .bg-landingpage {
     background-image: url('landingpage.jpg');
+    min-height: 100vh;
+    min-width: 100vw;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -36,10 +70,12 @@
 
 .bg-home {
     background-image: url('fitness_home.jpg');
+    min-height: 100vh;
+    min-width: 100vw;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -49,18 +85,12 @@
 
 }
 
-.bg-programs {
+#programs {
+    background-color: #333333;
     background-image: url('gambar4.jpg');
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: brightness(0.5);
-    z-index: -1;
-    -webkit-filter: brightness(0.5);
+    background-blend-mode: overlay;
 }
 
 
@@ -103,9 +133,9 @@ pre.wrap-text {
 
 }
 
-.min-vh-100 {
+/* .min-vh-100 {
     min-height: 100vh;
-}
+} */
 
 .full-height .img-fluid {
     height: 100%;
@@ -113,19 +143,6 @@ pre.wrap-text {
     object-fit: cover;
 }
 
-/* .hoverrated{
-    overflow: hidden;
-    transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    -webkit-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    -moz-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    -ms-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    -o-transition: transform 0.5 ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    background-color: #a7d625;
-}
-
-.hoverrated:hover{
-    background-color: #D8E9A8;
-} */
 
 .hoverrated:hover {
     color: #ff6347; /* Tomato color */

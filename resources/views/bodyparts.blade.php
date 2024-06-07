@@ -4,7 +4,7 @@
 
 @if ($equipment->bodyparts->count())
 
-    <div class="container-fluid text-color" style="min-height: 85vh;">
+    <div class="container-fluid text-color">
         <h1 class="fw-bold text-center pt-3 display-3">CHOOSE BODY PARTS</h1>
 
         <div class="d-flex justify-content-center">

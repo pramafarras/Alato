@@ -14,7 +14,7 @@
                     <h1 class="modal-title fs-5" id="createPlaylistModalLabel">Create New Playlist</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body text-start">
                     <div class="mt-2">
                         <input type="text" name="playlist_name" class="form-control @error('playlist_name') is-invalid @enderror" id="playlistNameInput" placeholder="Playlist Name" value="{{ old('playlist_name') }}">
                         @error('playlist_name')
@@ -31,11 +31,11 @@
     </div>
 </div>
 {{-- modal end --}}
-
+<div class="container-fluid text-color h-100">
 @if ($playlists->count())
-<div class="container-fluid text-color">
-    <div class="container d-flex justify-content-center align-items-center flex-column my-3 text-center" style="min-height: 85vh;">
-        <h1 class="fw-bold pt-3 display-3 mb-5">My Playlist</h1>
+
+    <div class="container d-flex justify-content-center align-items-center flex-column my-3 text-center">
+        <h1 class="fw-bold pt-3 display-3 mb-3">My Playlist</h1>
 
         <button type="button" class="btn btn-success btn-hover mb-3" data-bs-toggle="modal" data-bs-target="#createPlaylistModal">
             Create New Playlist <i class="bi bi-plus-circle"></i>
@@ -125,7 +125,7 @@
                             <h5 class="modal-title" id="removePlaylistModalLabel">Remove <i>{{ $playlist->name }}</i></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body text-start">
                             Are you sure you want to remove this playlist?
                         </div>
                         <div class="modal-footer">
@@ -144,11 +144,14 @@
             @endforeach
         </div>
     </div>
-</div>
+
 
 @else
-<h1 class="container-fluid d-flex align-items-center justify-content-center flex-column display-3 text-light text-center mb-3" style="min-height: 85vh;">No Playlist Found</h1>
+<div class="d-flex justify-content-center align-items-center h-100" style="height: 50vh;">
+    <h1 class="display-5 text-light text-center">No Playlist Found</h1>
+</div>
 @endif
 
+</div>
 
 @endsection
