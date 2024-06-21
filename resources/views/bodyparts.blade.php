@@ -60,7 +60,7 @@
 
         @endforeach
         <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-success px-5 mb-3 ">SUBMIT</button>
+        <button type="submit" class="btn btn-success px-5 mb-3 btn-hover">SUBMIT</button>
     </div>
     </form>
     </div>

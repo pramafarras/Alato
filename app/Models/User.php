@@ -58,7 +58,7 @@ class User extends Authenticatable
     public function workouts()
     {
         return $this->belongsToMany(Workout::class, 'user_workout', 'user_id', 'workout_id')
-            ->withPivot('is_rated', 'is_playlist')
+            ->withPivot('is_rated')
             ->withTimestamps();
     }
 

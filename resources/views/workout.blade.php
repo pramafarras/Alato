@@ -11,7 +11,7 @@
 <div class="text-center d-flex justify-content-center align-items-center align-content-center py-3">
     <div class="col-md-4">
         <i class="display-6 text-color shadow">Find Your Workouts</i>
-        <form method="GET">
+        <form method="GET" action="{{ route('workout', array_merge(request()->query(), ['search' => null])) }}">
             <div class="form-group my-2 shadow">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" name="search" value="{{ request('search') }}">

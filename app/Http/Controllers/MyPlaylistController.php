@@ -32,7 +32,7 @@ class MyPlaylistController extends Controller
     return view('playlistdetail', [
         'title' => $playlist->name,
         'playlist' => $playlist,
-        'selectedEquipment' => $selectedEquipment,
+        // 'selectedEquipment' => $selectedEquipment,
     ]);
 }
 
@@ -45,8 +45,8 @@ public function removePlaylist($playlistId)
         $playlist->delete();
 
         // Remove the 'is_rated' pivot value for the user and workout
-        $user = User::findOrFail(Auth::id());
-        $user->workouts()->updateExistingPivot($playlist->workout_id, ['is_playlist' => false]);
+        // $user = User::findOrFail(Auth::id());
+        // $user->workouts()->updateExistingPivot($playlist->workout_id, ['is_playlist' => false]);
 
         return redirect()->back()->with('success', 'Your rating has been removed.');
     } else {
